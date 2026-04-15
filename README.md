@@ -23,4 +23,6 @@ This repo intentionally does not duplicate sponsor skill content. Sponsor skills
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+Resource data and sponsor skill contributions belong in `ColosseumOrg/hackathon-resources`.
+
+See https://github.com/ColosseumOrg/hackathon-resources/blob/main/CONTRIBUTING.md.
