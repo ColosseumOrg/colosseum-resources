@@ -17,7 +17,7 @@ curl -s https://ColosseumOrg.github.io/hackathon-resources/current.json
 
 The JSON includes:
 
-- `sponsors`: sponsor tools with names, descriptions, tags, links, full markdown content, and `hasSkill`
+- `sponsors`: sponsor tools with names, descriptions, tags, links, full markdown content, `hasSkill`, and optional `skillRepositoryUrl` / `skillInstallCommand`
 - `rpcProviders`: RPC providers with offers and links
 - `resources`: curated resource sections
 - `resourceGroups`: grouped foundations and build-path resources
@@ -33,11 +33,7 @@ If the fetch fails, say that the live resource index could not be reached and gi
 5. Explain why each choice fits this exact project.
 6. Include one concrete integration move for each recommendation.
 7. Include a documentation link from the sponsor or provider `links` array.
-8. If `hasSkill` is true, offer the sponsor skill install command:
-
-```bash
-npx skills add ColosseumOrg/hackathon-resources --skill <slug>
-```
+8. If `hasSkill` is true, offer the exact `skillInstallCommand` from the sponsor entry. Do not construct a fallback command.
 
 Use the general advisor install command when the builder wants broad guidance:
 
@@ -67,7 +63,7 @@ For each recommended item, include:
 - Why it fits the project
 - A concrete integration step
 - A docs or starter link from the live resource data
-- Skill install command when available
+- The sponsor's `skillInstallCommand` when available
 
 When coverage is thin, be direct: "The current Colosseum resource corpus does not have a strong dedicated match for X." Then point to the closest resource and suggest asking in the Solana developer Discord.
 
@@ -80,7 +76,7 @@ Response shape:
 1. **Arcium** -- Use it as the confidential computation layer. For DeFi, this is the right fit when trade sizes, positions, bids, votes, or counterparties need to remain encrypted while still being verifiable on Solana.
    - Integration move: prototype the private state transition as an Arcium MPC computation, then have the Solana program queue the computation and consume the callback.
    - Docs: use the Arcium documentation link from the live resource data.
-   - Skill: `npx skills add ColosseumOrg/hackathon-resources --skill arcium`
+   - Skill: `npx skills add arcium-hq/agent-skills`
 
 2. **An RPC provider from `rpcProviders`** -- DeFi protocols need reliable reads, transaction submission, and event monitoring.
    - Integration move: configure the app and indexer to use the provider endpoint instead of public RPC before testing high-frequency flows.
@@ -98,7 +94,7 @@ Response shape:
 
 1. **Phantom** -- Use Phantom for wallet onboarding and user-facing wallet UX. It fits because a consumer rewards app needs low-friction wallet connection more than custom wallet infrastructure.
    - Integration move: start with the Phantom mobile or embedded wallet template from the live links.
-   - Skill: `npx skills add ColosseumOrg/hackathon-resources --skill phantom`
+   - Skill: no sponsor-hosted skill is currently published in the live resource data.
 
 2. **MoonPay or Swig** -- Use the payment-focused sponsor that best matches the reward flow in the live resource data.
    - Integration move: map reward redemption into the payment/onramp or account abstraction flow described by that sponsor's docs.
@@ -117,7 +113,7 @@ Response shape:
 
 2. **Phantom** -- Use it for buyer and seller wallet UX.
    - Integration move: connect Phantom before implementing listing and purchase flows so signing and session state are solved early.
-   - Skill: `npx skills add ColosseumOrg/hackathon-resources --skill phantom`
+   - Skill: no sponsor-hosted skill is currently published in the live resource data.
 
 3. **RPC provider** -- Use a provider from the live `rpcProviders` array for fast reads of listings and ownership.
    - Integration move: use the provider's APIs for asset lookup or transaction monitoring if offered.
