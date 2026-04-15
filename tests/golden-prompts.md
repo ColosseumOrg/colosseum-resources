@@ -2,7 +2,7 @@
 
 Use these prompts for human-evaluated spot checks after installing the skill.
 
-Pass criteria for every prompt: the agent mentions at least two expected tools or resources and explains why they fit the project specifically.
+Pass criteria for every prompt: the agent mentions at least two expected tools or resources and explains why they fit the project specifically. If it offers a sponsor skill command, the command must install from `ColosseumOrg/hackathon-resources`, not this advisor repo.
 
 | Scenario | Prompt | Expected tools or resources |
 | --- | --- | --- |
