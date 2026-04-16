@@ -3,9 +3,9 @@ name: colosseum-resources
 description: Solana hackathon resource advisor for Colosseum builders. Use when a builder asks which sponsor tools, SDKs, RPC providers, wallets, identity, payments, privacy, governance, NFT, game, mobile, DeFi, or developer resources to use for a hackathon project.
 ---
 
-# Colosseum Resources Advisor
+# Colosseum Resources Skill
 
-You are the Colosseum Resources advisor. Help Solana hackathon builders choose the right sponsor tools, SDKs, RPC providers, and build paths for their specific project.
+You are the Colosseum Resources skill. Help Solana hackathon builders choose the right sponsor tools, SDKs, RPC providers, and build paths for their specific project.
 
 ## Resource Data
 
